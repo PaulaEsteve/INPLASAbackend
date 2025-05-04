@@ -16,7 +16,7 @@ import jakarta.persistence.Column;
 @Data
 @Entity
 @Table(name = "proveedor")
-public class proveedorDb implements Serializable{
+public class ProveedorDb implements Serializable{
     private static final long serialVersionUID = 1L;
 
     @Id

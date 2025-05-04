@@ -1,7 +1,8 @@
 package org.inplasa.mantenimineto.inplasa.model.dto;
 
-import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
+
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,8 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-
-public class proveedorInfo implements Serializable {
+public class ProveedorList implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long id;
 
