@@ -59,12 +59,12 @@ public class ProveedorServiceImpl implements ProveedorService{
             "El ID proporcionado no coincide con el ID del proveedor.");
         }
 
-        ProveedorDb existingEntity = proveedorRepository.findById(id)
+        ProveedorDb entity = proveedorRepository.findById(id)
             .orElseThrow(() -> new EntityNotFoundException("PROVEEDOR_NOT_FOUND_FOR_UPDATE",
-                "No se puede actualizar. El chunk con ID " + id + " no existe."));
+                "no se encontró el proveedor"));
 
-        ProveedorMapper.INSTANCE.updateProveedorDbFromProveedorEdit(proveedorEdit, existingEntity);
-        return ProveedorMapper.INSTANCE.proveedorDbToProveedorEdit(proveedorRepository.save(existingEntity));
+        ProveedorMapper.INSTANCE.updateProveedorDbFromProveedorEdit(proveedorEdit, entity);
+        return ProveedorMapper.INSTANCE.proveedorDbToProveedorEdit(proveedorRepository.save(entity));
     }
 
     @Override

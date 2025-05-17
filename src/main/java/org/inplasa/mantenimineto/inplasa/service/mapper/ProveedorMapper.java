@@ -16,15 +16,18 @@ import org.springframework.data.domain.Page;
 @Mapper
 public interface ProveedorMapper {
     ProveedorMapper INSTANCE = Mappers.getMapper(ProveedorMapper.class);
-    
+
     ProveedorEdit proveedorDbToProveedorEdit(ProveedorDb proveedorDb);
+
     ProveedorDb proveedorEditToProveedorDb(ProveedorEdit proveedorEdit);
 
     ProveedorInfo proveedorDbToProveedorInfo(ProveedorDb proveedorDb);
+
     ProveedorDb proveedorInfoToProveedorDb(ProveedorInfo proveedorInfo);
-    
+
     List<ProveedorList> proveedorDbToProveedorList(List<ProveedorDb> proveedorDb);
-    void updateProveedorDbFromProveedorEdit(ProveedorEdit proveedorEdit,@MappingTarget ProveedorDb proveedorDb);
+
+    void updateProveedorDbFromProveedorEdit(ProveedorEdit proveedorEdit, @MappingTarget ProveedorDb proveedorDb);
 
     static PaginaResponse<ProveedorList> pageToPaginaResponseProveedorList(
             Page<ProveedorDb> page,
