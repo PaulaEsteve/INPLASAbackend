@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 
 ### Proveedor.read
-GET http://localhost:8090/api/proveedores/1 HTTP/1.1
+GET http://localhost:8090/api/proveedores/2 HTTP/1.1
 Content-Type: application/json
 ###
 
